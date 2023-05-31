@@ -13,4 +13,13 @@ public class Coach {
         this.name = name;
         this.cantEatMenu = cantEatMenu;
     }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public List<String> getCantEatMenu() {
+        return cantEatMenu;
+    }
 }
