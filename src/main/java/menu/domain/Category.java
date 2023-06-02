@@ -14,16 +14,16 @@ public class Category {
         this.menu = menu;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
-    public List<String> getRecommendMenu(Coach coach){
+    public List<String> getRecommendMenu(Coach coach) {
         List<String> recommendedMenu = new ArrayList<>();
         List<String> cantEatMenu = coach.getCantEatMenu();
-        while(recommendedMenu.size() != 5){
+        while (recommendedMenu.size() != 5) {
             String menu = Randoms.shuffle(this.menu).get(0);
-            if(isExistMenu(recommendedMenu,menu) || isExistMenu(cantEatMenu,menu)){
+            if (isExistMenu(recommendedMenu, menu) || isExistMenu(cantEatMenu, menu)) {
                 continue;
             }
             recommendedMenu.add(menu);
@@ -32,8 +32,7 @@ public class Category {
     }
 
 
-
-    private boolean isExistMenu(List<String> menuList, String menu){
+    private boolean isExistMenu(List<String> menuList, String menu) {
         return menuList.contains(menu);
     }
 }

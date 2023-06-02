@@ -9,31 +9,31 @@ public class InputValidator {
     private static final String COACH_NAMES_ERROR_2 = "[ERROR] 코치의 이름은 최소 2글자, 최대 4글자까지입니다.";
     private static final String CANT_EAT_MENU_ERROR = "[ERROR] 못 먹는 메뉴는 최소 0개, 최대 2개까지입니다.";
 
-    public static String validateCoachNames(String input){
+    public static String validateCoachNames(String input) {
         List<String> coachNames = Arrays.asList(input.split(","));
-        if(coachNames.size() < 2 || coachNames.size() > 5){
+        if (coachNames.size() < 2 || coachNames.size() > 5) {
             throw new IllegalArgumentException(COACH_NAMES_ERROR_1);
         }
-        if(!isCoachNameSizeTwoToFour(coachNames)){
+        if (!isCoachNameSizeTwoToFour(coachNames)) {
             throw new IllegalArgumentException(COACH_NAMES_ERROR_2);
         }
         return input;
     }
 
-   private static boolean isCoachNameSizeTwoToFour(List<String> coachNames){
-       for (String coachName : coachNames) {
-           if(coachName.length() < 2 || coachName.length() > 4){
-               return false;
-           }
-       }
-       return true;
-   }
+    private static boolean isCoachNameSizeTwoToFour(List<String> coachNames) {
+        for (String coachName : coachNames) {
+            if (coachName.length() < 2 || coachName.length() > 4) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-   public static String validateCantEatMenu(String input){
+    public static String validateCantEatMenu(String input) {
         List<String> cantEatMenu = Arrays.asList(input.split(","));
-        if(cantEatMenu.size() > 2){
+        if (cantEatMenu.size() > 2) {
             throw new IllegalArgumentException(CANT_EAT_MENU_ERROR);
         }
         return input;
-   }
+    }
 }

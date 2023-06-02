@@ -17,11 +17,11 @@ public class Categories {
         return Collections.unmodifiableList(categories);
     }
 
-    public List<Category> getRecommendedCategories(){
+    public List<Category> getRecommendedCategories() {
         List<Category> recommendedCategories = new ArrayList<>();
-        while(recommendedCategories.size() != 5){
-            Category category = categories.get(Randoms.pickNumberInRange(0,4));
-            if(getCount(recommendedCategories, category) == 2){
+        while (recommendedCategories.size() != 5) {
+            Category category = categories.get(Randoms.pickNumberInRange(0, 4));
+            if (getCount(recommendedCategories, category) == 2) {
                 continue;
             }
             recommendedCategories.add(category);
@@ -31,7 +31,8 @@ public class Categories {
 
 
     private int getCount(List<Category> recommendedCategories, Category category) {
-        return (int) recommendedCategories.stream().filter(cate -> cate.getName().equals(category.getName()))
+        return (int) recommendedCategories.stream()
+            .filter(cate -> cate.getName().equals(category.getName()))
             .count();
     }
 
