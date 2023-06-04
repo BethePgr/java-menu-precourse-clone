@@ -1,3 +1,5 @@
+## 정리
+
 Coach 클래스로 코치 관리
 못 먹는 메뉴 List<String> cantEat에다가 메뉴 저장하기
 
