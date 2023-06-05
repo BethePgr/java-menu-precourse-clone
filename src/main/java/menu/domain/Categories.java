@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Categories {
 
+    private static final String EXIST_ERROR = "[ERROR] 존재하지 않는 메뉴입니다.";
     private final List<Category> categories;
 
     public Categories(List<Category> categories) {
@@ -36,12 +37,11 @@ public class Categories {
             .count();
     }
 
-    public boolean isExistMenu(String menu){
+    public void validateExistMenu(String menu) throws IllegalArgumentException{
         for (Category category : categories) {
             if(!category.isExistMenu(menu)){
-                return false;
+                throw new IllegalArgumentException(EXIST_ERROR);
             }
         }
-        return true;
     }
 }
