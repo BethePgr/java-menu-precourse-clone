@@ -3,6 +3,7 @@ package menu.controller;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import menu.domain.Categories;
 import menu.domain.Category;
 import menu.domain.Coach;
 import menu.domain.Coaches;
@@ -11,6 +12,14 @@ import menu.view.InputView;
 import menu.view.OutputView;
 
 public class MenuController {
+
+    Categories categories;
+    Coaches coaches;
+
+    public MenuController(){
+        categories = new Categories(categoriesInit());
+        coaches =  new Coaches();
+    }
 
     public void run(){
         OutputView.printStartMessage();
@@ -21,6 +30,10 @@ public class MenuController {
         coaches.getCoaches().stream().forEach(coach ->{
             List<String> cantEatMenu = StringParser.getSplitList(InputView.getCantEatMenu(coach.getName()));
             coach.setCantEatMenu(cantEatMenu);
+        });
+        List<Category> recommendedCategories = categories.getRecommendedCategories();
+        recommendedCategories.stream().forEach(category -> {
+            coaches.getCoaches().stream().forEach(coach -> coach.addEatMenu(category));
         });
         OutputView.printEndMessage();
     }
