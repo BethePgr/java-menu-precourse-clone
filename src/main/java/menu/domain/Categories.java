@@ -1,5 +1,7 @@
 package menu.domain;
 
+import static menu.constant.ExceptionConstants.EXIST_ERROR;
+
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +9,6 @@ import java.util.List;
 
 public class Categories {
 
-    private static final String EXIST_ERROR = "[ERROR] 존재하지 않는 메뉴입니다.";
     private final List<Category> categories;
 
     public Categories(List<Category> categories) {
