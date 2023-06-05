@@ -35,6 +35,7 @@ public class MenuController {
         recommendedCategories.stream().forEach(category -> {
             coaches.getCoaches().stream().forEach(coach -> coach.addEatMenu(category));
         });
+        OutputView.printRecommendedResult(recommendedCategories,coaches);
         OutputView.printEndMessage();
     }
 
