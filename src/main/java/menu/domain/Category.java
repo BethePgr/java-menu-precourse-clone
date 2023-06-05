@@ -23,6 +23,6 @@ public class Category {
     }
 
     public boolean isExistMenu(String menu){
-        return this.menu.contains(menu);
+        return this.menu.contains(menu) || menu.equals("");
     }
 }
