@@ -24,13 +24,6 @@ public class Coach {
     public void setCantEatMenu(List<String> cantEatMenu){
         this.cantEatMenu = cantEatMenu;
     }
-    public List<String> getCantEatMenu() {
-        return cantEatMenu;
-    }
-
-    public void setEatMenu(List<String> eatMenu){
-        this.eatMenu = eatMenu;
-    }
 
     public List<String> getEatMenu(){
         return eatMenu;
