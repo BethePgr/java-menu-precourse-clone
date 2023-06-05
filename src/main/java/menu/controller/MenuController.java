@@ -52,10 +52,10 @@ public class MenuController {
 
     private List<Category> categoriesInit() {
         List<String> japanese = StringParser.getSplitList(JAPANESE_MENU);
-        List<String> korean = StringParser.getSplitList(KOREAN);
-        List<String> chinese = StringParser.getSplitList(CHINESE);
-        List<String> asian = StringParser.getSplitList(ASIAN);
-        List<String> western = StringParser.getSplitList(WESTERN);
+        List<String> korean = StringParser.getSplitList(KOREAN_MENU);
+        List<String> chinese = StringParser.getSplitList(CHINESE_MENU);
+        List<String> asian = StringParser.getSplitList(ASIAN_MENU);
+        List<String> western = StringParser.getSplitList(WESTERN_MENU);
         List<Category> categories = new ArrayList<>();
         categories.add(new Category(JAPANESE, japanese));
         categories.add(new Category(KOREAN, korean));
