@@ -2,6 +2,7 @@ package menu.domain;
 
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Category {
@@ -18,22 +19,8 @@ public class Category {
         return name;
     }
 
-    public List<String> getRecommendMenu(Coach coach){
-        List<String> recommendedMenu = new ArrayList<>();
-        List<String> cantEatMenu = coach.getCantEatMenu();
-        while(recommendedMenu.size() != 5){
-            String menu = Randoms.shuffle(this.menu).get(0);
-            if(isExistMenu(recommendedMenu,menu) || isExistMenu(cantEatMenu,menu)){
-                continue;
-            }
-            recommendedMenu.add(menu);
-        }
-        return recommendedMenu;
+    public List<String> getMenu(){
+        return Collections.unmodifiableList(menu);
     }
 
-
-
-    private boolean isExistMenu(List<String> menuList, String menu){
-        return menuList.contains(menu);
-    }
 }
