@@ -12,7 +12,7 @@ List<String> menu에다가 다 넣어놓기
 - [x] 못 먹는 메뉴 0~2개 입력 받기
 ## OutputView(view)
 - [x] 점심 메뉴 추천 시작 출력하기
-- [ ] 메뉴 추천 결과 출력하기
+- [x] 메뉴 추천 결과 출력하기
 - [x] 추천 완료 출력하기
 
 ## Coach (domain)
@@ -36,7 +36,7 @@ List<String> menu에다가 다 넣어놓기
   - [x] 같은 카테고리는 최대 두 번 까지만 가능
 
 ## MenuController (controller)
-- [ ] 카테고리에 대한 정보들을 초기 설정한다.
+- [x] 카테고리에 대한 정보들을 초기 설정한다.
 - [ ] 메뉴 추천 프로그램을 시작한다.
 ## StringParser (util)
 - [x] 입력으로 들어오는 String을 split하여 리스트로 변환한다.
