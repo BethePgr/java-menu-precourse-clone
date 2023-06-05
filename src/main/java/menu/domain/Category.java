@@ -21,4 +21,8 @@ public class Category {
     public List<String> getMenu(){
         return menu;
     }
+
+    public boolean isExistMenu(String menu){
+        return this.menu.contains(menu);
+    }
 }
