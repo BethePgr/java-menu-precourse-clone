@@ -44,3 +44,12 @@ List<String> menu에다가 다 넣어놓기
 - [x] 메뉴 추천 프로그램을 시작한다.
 ## StringParser (util)
 - [x] 입력으로 들어오는 String을 split하여 리스트로 변환한다.
+
+## InputViewConstants (constant)
+- [ ] InputView 에서 사용되는 상수를 관리한다.
+
+## OutputViewConstants (constant)
+- [ ] OutputView 에서 사용되는 상수를 관리한다.
+
+## ExceptionConstants (constant)
+- [ ] 예외 처리 시에 사용되는 상수를 관리한다.
